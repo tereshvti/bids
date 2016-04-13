@@ -47,7 +47,6 @@ class RequestSearch extends Request
     {
         $query = Request::find();
         $query->joinWith('user');
-        $query->orderBy('urgency ASC');
 
         // add conditions that should always apply here
 

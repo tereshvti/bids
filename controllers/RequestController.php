@@ -89,7 +89,7 @@ class RequestController extends Controller
     {
         $model = $this->findModel($id);
         if ( ! $this->isCurrentUsersRequest($model)) {
-            $this->redirect(['requests']);
+            $this->redirect('/requests');
         }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -111,7 +111,7 @@ class RequestController extends Controller
     {
         $model = $this->findModel($id);
         if ( ! $this->isCurrentUsersRequest($model)) {
-            $this->redirect(['requests']);
+            $this->redirect('/requests');
         }
         $model->delete();
 
